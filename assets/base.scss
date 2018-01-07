@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: $base-font;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@import 'typography';
+@import 'layout';
+@import 'background';
+@import 'animations';

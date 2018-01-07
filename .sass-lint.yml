@@ -1,0 +1,17 @@
+files:
+  include: ['**/*.s+(a|c)ss', '**/*.vue']
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  class-name-format: 0
+  id-name-format: 0
+  nesting-depth:
+    - 1
+    - max-depth: 4
+  no-important: 0
+  no-url-protocols: 0
+  placeholder-name-format: 0
+  property-sort-order:
+    - 1
+    - order: smacss
