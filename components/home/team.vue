@@ -1,5 +1,5 @@
 <template lang="html">
-  <section id="team" class="section layout-col4 background-dark">
+  <section id="team" class="section section-round layout-col4 background-light">
     <h2 class="section-header layout-col4-full">Our Team</h2>
     <teamMember v-for="(member, index) in members" :key="index" :member="member"></teamMember>
   </section>

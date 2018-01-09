@@ -1,11 +1,16 @@
 <template lang="html">
   <footer>
-    <h6>Copyright 2018 Social Wallet</h6>
+    <h6>© {{date.getFullYear()}} Social Wallet</h6>
   </footer>
 </template>
 
 <script>
 export default {
+  data: function () {
+    return {
+      date: new Date()
+    }
+  }
 }
 </script>
 

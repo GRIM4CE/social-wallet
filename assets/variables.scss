@@ -3,12 +3,55 @@ $base-font: 'Open Sans', sans-serif;
 $black: #000711;
 $white: #fff;
 
-$primary300: #377dE7;
-$primary400: #1366e5;
+$primary300: #4881d4;
+$primary400: #386BB4;
 
+$secondary300: #24f7ce;
 $secondary400: #02E3B7;
 
+$gray200: #edeff4;
 $gray300: #E3E3E3;
 $gray400: #d6d6d6;
 $gray600: #b9b9b9;
 $gray800: #202020;
+
+%button {
+  padding: .5rem 5rem;
+  transition: background-color .5s;
+  background-color: $primary400;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $primary300;
+  }
+}
+
+%outline-button {
+  padding: .5rem 2rem;
+  transition: background-color .5s;
+  border: 2px solid $white;
+  border-radius: 25px;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $primary400;
+  }
+}
+
+%form-button {
+  padding: .5rem 1.5rem;
+  transition: .5s background-color;
+  border: 0;
+  background-color: $primary400;
+  color: $white;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary300;
+  }
+}

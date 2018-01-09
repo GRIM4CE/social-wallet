@@ -2,9 +2,12 @@
   <section id="home" class="hero">
     <div class="hero-opacity"></div>
     <div class="hero-content">
-      <img class="hero-logo" src="~/static/logo.svg" alt="">
+      <img class="hero-logo" src="~/static/logo-new.svg" alt="">
       <h2 class="hero-header">Join our Pre-sale</h2>
-      <a class="hero-cta" href="#">Buy Now</a>
+      <div class="hero-cta-container">
+        <a class="hero-cta" href="#">Pre-Sale</a>
+        <a class="hero-cta" href="#">Whitepaper</a>
+      </div>
     </div>
   </section>
 </template>
@@ -18,8 +21,8 @@ export default {}
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
-    background-image: url("~/static/hero.png");
+    min-height: 100vh;
+    background-image: url("~/static/banner.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -31,22 +34,24 @@ export default {}
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba($black, .3);
+    background-color: rgba($black, .8);
 }
 
 .hero-content {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: flex-start;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 52px;
     z-index: 1;
 }
 
 .hero-logo {
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 1rem;
 }
 
 .hero-header {
@@ -58,10 +63,34 @@ export default {}
     text-align: center;
 }
 
+.hero-cta-container {
+  margin-top: 1rem;
+}
+
 .hero-cta {
-    padding: .5rem 5rem;
-    background-color: $primary400;
-    color: $white;
-    text-decoration: none;
+  @extend %outline-button;
+  margin: .5rem;
+}
+
+@media all and (min-width: 37.5rem) {
+  .hero {
+    align-items: center;
+  }
+
+  .hero-content {
+    margin-top: 0;
+  }
+
+  .hero-logo {
+      width: 100%;
+  }
+
+  .hero-header {
+      margin: 1rem 0;
+  }
+
+  .hero-cta {
+    margin: 1rem;
+  }
 }
 </style>

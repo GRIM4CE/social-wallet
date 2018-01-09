@@ -4,7 +4,8 @@ module.exports = {
    */
   head: {
     title: 'Social Wallet',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -18,6 +19,8 @@ module.exports = {
       }
     ]
   },
+  css: ['@fortawesome/fontawesome/styles.css'],
+  plugins: [{ src: '~/plugins/font-awesome' }],
   /*
    ** Build configuration
    */
@@ -34,9 +37,10 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      config.module.rules.forEach((rule) => {
+      config.module.rules.forEach(rule => {
         if (rule.test.toString() === '/\\.vue$/') {
-          rule.options.loaders.scss[2].options.data = '@import "./assets/variables";'
+          rule.options.loaders.scss[2].options.data =
+            '@import "./assets/variables";'
         }
       })
     }
